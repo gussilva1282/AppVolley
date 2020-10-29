@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AppVolley</string>
+    <string name="nome">Nome</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="mobile">Mobile</string>
+    <string name="carrega_informa_es">Carrega Informações</string>
+    <string name="locado">Locado</string>
+    <string name="tipo">Tipo</string>
+</resources>
