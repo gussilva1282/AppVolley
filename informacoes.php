@@ -6,15 +6,14 @@ $db_name = "dbfilmes";
 
 $con = mysqli_connect($host,$user_name,$password,$db_name);
 
-$sql = "SELECT * FROM tbtitulos WHERE nome like '%Matrix%';";
+$sql = "SELECT * FROM tbtitulos;";
 
 $result = mysqli_query($con,$sql);
 
-if(mysqli_num_rows($result)>0){
+$response = array();
 
-	$row = mysqli_fetch_assoc($result);
-
-	echo json_encode(array("Nome"=>$row["nome"],"Tipo"=>$row["tipo"],"Locado"=>$row
-		["locado"]));
+while ($row = mysqli_fetch_array($result)) {
+	array_push($response, array("Nome"=>$row['nome'],"Tipo"=>$row['tipo']));
 }
+	echo json_encode($response);
 ?>
